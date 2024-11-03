@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebGL Timeline</title>
+    <title>Placeholder Canvas Timeline</title>
 </head>
+
 <body>
-    <canvas id="glCanvas" width="640" height="480"></canvas>
-    <script src="index.js"></script>
+    <h2>Placeholder Canvas Timeline</h2>
+    <canvas id="timelineCanvas" width="800" height="200"></canvas>
+    <script>
+        //variables
+        const canvas=document.getElementById("timelineCanvas");
+        const ctx=canvas.getContext('2d');
+        const events=[
+            {year:2000, description: 'Event1'},
+            {year:2001, description: 'Event2'},
+            {year:2002, description: 'Event3'},
+            {year:2003, description: 'Event4'}
+        ];
+        const start_x=50;
+        const lineY=100;
+        const gap=200;
+        //draw timeline
+        ctx.beginPath();
+        ctx.moveTo(start_x,lineY);
+        ctx.lineTo(start_x + gap * (events.length-1), lineY);
+        ctx.stroke();
+        //draw events
+        for (let i=0;i<events.length;i++){
+            const event=events[i];
+            const x=start_x + gap*i;
+            //draw year
+            ctx.fillText(event.year,x,lineY-10);
+            //draw description
+            ctx.fillText(event.description,x,lineY+10);
+            //draw a circle at each event
+            ctx.beginPath();
+            ctx.arc(x,lineY,5,0,Math.PI*2);
+            ctx.fill();
+        }
+    </script>
 </body>
+
 </html>
