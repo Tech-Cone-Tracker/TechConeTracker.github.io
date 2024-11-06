@@ -4,12 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #3b97bc;
+          color: #ffffff;
+        }
+        </style>
 </head>
 <body>
-    glossary<p>list of terms</p>
-    <ul>
-        <li>Countable Infinity</li>
-        <li>Uncountable Infinity</li>
-    </ul>
+    <h1>Glossary</h1>
+    <table>
+        <tr>
+          <th>#</th>  
+          <th>Term</th>
+          <th>Definitions</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Countable Infinity</td>
+          <td>A type of infinity that can be matched with natural numbers (e.g., integers).</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Uncountable Infinity</td>
+          <td>A larger type of infinity that cannot be matched one-to-one with natural numbers (e.g., real numbers).</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Proof of the Successor</td>
+          <td>A mathematical proof showing that each natural number has a unique next (successor) number.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Irrational Numbers</td>
+          <td>Numbers that cannot be expressed as a ratio of two integers, with non-repeating, non-terminating decimal expansions (e.g., √2, π).</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Dedekind 1872: Continuity and Irrational Numbers</td>
+          <td>Establishes foundational concepts for set theory and defines irrational numbers rigorously.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Dedekind 1888: What Are Numbers and What They Should Be</td>
+          <td>Introduces the idea of defining numbers through the successor function, forming the basis of set theory with S(n) = n + 1.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Principia Mathematica (1910)</td>
+          <td>A comprehensive work by Whitehead and Russell that formalizes mathematical logic using set theory and builds upon Dedekind's ideas.</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Skolem's Paradox (1921)</td>
+          <td>Demonstrates that countable models can represent uncountable sets, contributing to model theory and first-order logic.</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Completeness Theorem (1930)</td>
+          <td>A theorem proving that any valid formula in first-order logic can be proven in a formal system, foundational to proof theory and computability.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Incompleteness Theorem (1931)</td>
+          <td>Gödel's theorem stating that any sufficiently complex formal system contains true statements that cannot be proven within the system itself.</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Lambda Calculus (1934)</td>
+          <td>A formal system created by Alonzo Church that provides the basis for programming languages and computability theory.</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Turing Machine (1936)</td>
+          <td>Alan Turing's abstract machine that formalizes computation and proves there are problems that cannot be solved algorithmically (e.g., the halting problem).</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Halting Problem (1936)</td>
+          <td>The problem of determining whether a computer program will halt or run forever, shown by Turing to be unsolvable by any algorithm.</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Von Neumann Architecture (1940)</td>
+          <td>A computer architecture that separates program instructions from data storage, forming the foundation for modern computer design.</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Fortran (1960)</td>
+          <td>One of the earliest high-level programming languages, used for scientific and engineering computations.</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Lisp (1960)</td>
+          <td>A programming language based on lambda calculus, influential in artificial intelligence and functional programming.</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Formal Logic</td>
+          <td>The use of symbolic logic to express and prove mathematical statements in a structured manner.</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>P</td>
+          <td>The class of problems that can be solved in polynomial time by a deterministic machine.</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>NP</td>
+          <td>The class of problems for which a solution can be verified in polynomial time, but finding the solution may be challenging.</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>P=NP / P!=NP</td>
+          <td>A major unsolved problem in computer science that asks whether every problem whose solution can be verified quickly can also be solved quickly.</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>NP-Completeness (1971)</td>
+          <td>A concept introduced by Stephen Cook to classify computational problems based on their complexity and solvability.</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Automated Theorem Proving (1980s)</td>
+          <td>Development of algorithms to have computers check mathematical proofs, leading to advances in computer science.</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Four Color Theorem (2005)</td>
+          <td>A computer-assisted proof showing that any map can be colored with four colors without adjacent regions sharing the same color.</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Proof of Four Color Theorem</td>
+          <td>The use of computational methods to prove the longstanding mathematical problem, completed in 2005.</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>Large LLMs (2017-2024)</td>
+          <td>Artificial neural networks designed for processing and generating text and visual data, which have become mainstream.</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>Quantum Computing (2024+)</td>
+          <td>Computing devices that use quantum bits, potentially providing exponential speedup over classical computers, although still in development.</td>
+        </tr>
+      </table>
 </body>
 </html>
