@@ -1,4 +1,4 @@
-export async function loadEvents() {
+async function loadEvents() {
     try {
         const response = await fetch('/events.json');
         //A. if fail
@@ -15,7 +15,7 @@ export async function loadEvents() {
     }
 }
 
-export function drawTimeline(events) {
+function drawTimeline(events) {
     //variables
     const canvas = document.getElementById("timelineCanvas");
     const ctx = canvas.getContext('2d');
