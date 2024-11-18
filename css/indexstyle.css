@@ -21,15 +21,15 @@ body {
   }
 
   /* Button style */
-.button-link {
+  .button-link {
     display: inline-block;
-    background-color: #4CAF50; /* button color */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
-    font-size: 24px; /* button font size */
-    transition: background-color 0.3s ease; /* hover delay */
+    font-size: 24px;
+    transition: background-color 0.3s ease;
 }
 
 /* button hover */
