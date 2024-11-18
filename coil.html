@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Spiral Timeline</title>
+  <link rel="stylesheet" href="css/coilstyle.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <button onclick="location.href='index.html'" aria-label="Navigate to Home">Home</button>
+    <button onclick="location.href='glossary.html'" aria-label="Navigate to Glossary">Glossary</button>
+    <button onclick="location.href='theCone.html'" aria-label="Navigate to The Cone">The Cone</button>
+    <button id="toggleTheme" aria-label="Toggle Day/Night Mode">Toggle Day/Night Mode</button>
+  </nav>
+
+  <!-- Controls for Filtering -->
+  <div id="controls">
+    <label for="startYear">Start Year:</label>
+    <input type="number" id="startYear" placeholder="e.g., 1920">
+    <label for="endYear">End Year:</label>
+    <input type="number" id="endYear" placeholder="e.g., 1940">
+    <button id="filterButton">Filter</button>
+  </div>
+
+  <!-- Tooltip and SVG Spiral -->
+  <div class="tooltip" id="tooltip"></div>
+  <svg id="spiral"></svg>
+
+  <script src="js/coil.js"></script>
+</body>
+</html>
