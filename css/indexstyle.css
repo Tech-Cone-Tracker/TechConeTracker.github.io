@@ -6,6 +6,7 @@ body {
   }
   a {
       font-size: 36px;
+      text-decoration: none;
   }
   .black-bar {
       background-color: black; /* The black color for the bar */
@@ -18,3 +19,20 @@ body {
       padding: 20px; /* Adds padding inside the bar for spacing */
       box-sizing: border-box;
   }
+
+  /* Button style */
+  .button-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+/* button hover */
+.button-link:hover {
+    background-color: #45a049; /* hover color */
+}

@@ -9,14 +9,13 @@
 
 <body>
     <h2>Placeholder Canvas Timeline</h2>
+    <p><a href="./glossary.html">Glossary</a></p>
+    <p><a href="./index.html">Main</a></p>
     <canvas id="timelineCanvas" width="800" height="200"></canvas>
-    <script type="module">
-        import {loadEvents,drawTimeline} from './js/functions.js'
-        async function awaitEvents(){
-            const events=await loadEvents();
-            drawTimeline(events);
-        }
-        awaitEvents();
+    <script src="./events.js"></script>
+    <script src="./js/functions.js"></script>
+    <script>
+        drawTimeline(events)
     </script>
     
 </body>
