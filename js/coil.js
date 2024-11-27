@@ -24,6 +24,7 @@ const data = [
   const svg = document.getElementById("spiral");
   const tooltip = document.getElementById("tooltip");
   const filterButton = document.getElementById("filterButton");
+  const randomButton= document.getElementById("randomButton");
   const startYearInput = document.getElementById("startYear");
   const endYearInput = document.getElementById("endYear");
   
@@ -137,6 +138,55 @@ const data = [
   
     drawSpiral(filteredData);
   });
+
+  // Draw Random Event
+  randomButton.addEventListener("click", () => {
+    const startYear = parseInt(startYearInput.value, 10) || Number.MIN_VALUE;
+    const endYear = parseInt(endYearInput.value, 10) || Number.MAX_VALUE;
+
+    // Remove previous random dot
+    const previousRandomDot = svg.querySelector('.dot-random');
+    if (previousRandomDot) {
+        previousRandomDot.remove();
+    }
+
+    // Clear existing timeline dots
+    const existingDots = svg.querySelectorAll('.dot, .dot-related');
+    existingDots.forEach(dot => dot.remove());
+
+    // Filter years to fall within the range
+    const validYears = data.map(item => item.year).filter(year => year >= startYear && year <= endYear);
+    const randomYear = validYears[Math.floor(Math.random() * validYears.length)];
+
+    // Find the full event details for the random year
+    const randomEvent = data.find(item => item.year === randomYear);
+
+    // Select a random index in the spiral path for dot placement
+    const randomIndex = Math.floor(Math.random() * pathData.length);
+    const { x, y } = pathData[randomIndex];
+
+    // Create the random event dot
+    const randomDot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    randomDot.setAttribute("cx", x);
+    randomDot.setAttribute("cy", y);
+    randomDot.setAttribute("r", 5);
+    randomDot.setAttribute("class", "dot-random");
+
+    // Append the dot to the SVG
+    svg.appendChild(randomDot);
+
+    // Add tooltip to the random dot
+    randomDot.addEventListener("mouseover", (event) => {
+        tooltip.style.display = "block";
+        tooltip.style.left = `${event.clientX}px`;
+        tooltip.style.top = `${event.clientY}px`;
+        tooltip.textContent = `${randomEvent.year}: ${randomEvent.term}`;
+    });
+
+    randomDot.addEventListener("mouseout", () => {
+        tooltip.style.display = "none";
+    });
+});
   
   // Navigation Function
   function navigate(page) {
