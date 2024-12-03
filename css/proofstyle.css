@@ -1,0 +1,70 @@
+/* Root variables for day mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --table-bg-color: #3b97bc;
+    --table-text-color: #ffffff;
+    --button-bg-color: #4CAF50;
+    --button-text-color: #ffffff;
+  }
+  
+  /* Night mode variables */
+  body.night-mode {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --table-bg-color: #222222;
+    --table-text-color: #ffffff;
+    --button-bg-color: #FF5722;
+    --button-text-color: #ffffff;
+  }
+  
+  /* General styles using variables */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid var(--text-color);
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--table-bg-color);
+    color: var(--table-text-color);
+  }
+  
+  .button-link {
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .link-container {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .content {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
