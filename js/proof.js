@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
       body.classList.toggle('night-mode');
       themeToggle.textContent = body.classList.contains('night-mode') 
-        ? 'Switch to Light Mode' 
-        : 'Switch to Dark Mode';
+        ? 'Switch to Day Mode' 
+        : 'Switch to Night Mode';
     });
   });
   

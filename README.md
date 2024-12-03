@@ -39,3 +39,13 @@ CS410 Project
 	6.	Related events appear as smaller dots around main dots, with info shown on hover.
 	7.	The design adjusts to different screen sizes, and the spiral resizes properly.
 	8.	All timeline events are shown when the page loads, spaced out neatly on the spiral.
+
+
+# story proof (html,css,js)
+	1.  Navigation buttons for “Home,” “Glossary,”, “The Cone” and "Coil" that work and are labeled for accessibility.
+	2.  Section dedicated to explaining relation between proof and techcone.
+	3.  Navigation bar has a Day and Night mode button.
+	4.  Easy to read synopsis of tech cone proof
+	5.  Day/Night button addjusts the background color, text, and button style to a lighter or darker theme
+	6.  Imbeded and Scrollable PDF file of the proof with proper scaling for different screen sizes. 
+	7.  Proof is displayed in an easy to read and download format 
