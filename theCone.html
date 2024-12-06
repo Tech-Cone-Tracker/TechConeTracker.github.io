@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder Canvas Timeline</title>
+    <title>Tech Cone Glossary</title>
+    <link rel="stylesheet" href="./css/theCone.css">
     <link rel="icon" type="image/x-icon" href="./static/cone.png">
 </head>
-
-<style>
-    .button-link {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 24px;
-    transition: background-color 0.3s ease;
-    }
-</style>
-
 <body>
-    <h2>Placeholder Canvas Timeline</h2>
-    <p><a href="./glossary.html" class="button-link">Glossary</a></p>
-    <p><a href="./index.html" class="button-link">Main</a></p>
-    <canvas id="timelineCanvas" width="800" height="200"></canvas>
-    <script src="./events.js"></script>
-    <script src="./js/functions.js"></script>
+    <h1>Timeline</h1>
+    <div class="link-container">
+      <p><a href="./index.html" class="button-link">Home</a></p>
+      <p><a href="./glossary.html" class="button-link">Glossary</a></p>
+      <p><a href="./coil.html" class="button-link">Coil</a></p>
+    </div>
+    <canvas id="timelineCanvas" width="800"></canvas>
+
     <script>
-        drawTimeline(events)
+        const events = [
+        { year: 1872, description: "Dedekind: Continuity and Irrational Numbers" },
+        { year: 1888, description: "Dedekind: What Are Numbers and What They Should Be" },
+        { year: 1910, description: "Principia Mathematica" },
+        { year: 1921, description: "Skolem's Paradox" },
+        { year: 1930, description: "Completeness Theorem" },
+        { year: 1931, description: "Incompleteness Theorem" },
+        { year: 1934, description: "Lambda Calculus" },
+        { year: 1936, description: "Turing Machine" },
+        { year: 1936, description: "Halting Problem" },
+        { year: 1940, description: "Von Neumann Architecture" },
+        { year: 1960, description: "Fortran" },
+        { year: 1960, description: "Lisp" },
+        { year: 1971, description: "NP-Completeness" },
+        { year: 2005, description: "Four Color Theorem Proof" },
+        { year: 2017, description: "Large LLMs (2017-2024)" },
+        { year: 2024, description: "Quantum Computing" }
+        ];
+
+        const canvas = document.getElementById('timelineCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Calculate canvas height based on the number of events
+        const verticalSpacing = 100;
+        const padding = 50;
+        canvas.height = padding * 2 + (events.length - 1) * verticalSpacing;
+
+        // Base starting point
+        const startX = 200;
+        const startY = padding;
+
+        // Draw timeline line
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(startX, startY + (events.length - 1) * verticalSpacing);
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // Draw events
+        events.forEach((event, index) => {
+            let yPos = startY + index * verticalSpacing;
+
+            // Draw circle for each event
+            ctx.beginPath();
+            ctx.arc(startX, yPos, 10, 0, 2 * Math.PI);
+            ctx.fillStyle = '#4CAF50';
+            ctx.fill();
+            ctx.strokeStyle = '#000';
+            ctx.stroke();
+
+            // Display year and description
+            ctx.font = '16px Arial';
+            ctx.fillStyle = '#000';
+            ctx.fillText(event.year, startX + 20, yPos + 5);
+            ctx.fillText(event.description, startX + 20, yPos + 25);
+        });
     </script>
-    
 </body>
-
 </html>
-
