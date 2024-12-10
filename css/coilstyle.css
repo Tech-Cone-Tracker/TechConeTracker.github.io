@@ -119,7 +119,56 @@ body {
   }
 
   /* Legend */
+  #legend {
+    position: absolute; /* or fixed, based on your needs */
+    bottom: 10px;
+    right: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
   
+  #legend h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  #legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .legend-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #000; /* Optional: for better visibility */
+  }
+  
+  .legend-color.human-events {
+    background-color: #ff4c4c;
+  }
+  
+  .legend-color.computer-events {
+    background-color: #4c8dff;
+  }
+  
+  .legend-color.related-events {
+    background-color: #4caf50;
+  }
   
   /* Adaption */
   @media (max-width: 768px) {
