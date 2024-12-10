@@ -117,6 +117,9 @@ body {
   body.night-mode svg {
     filter: brightness(0.8);
   }
+
+  /* Legend */
+  
   
   /* Adaption */
   @media (max-width: 768px) {
